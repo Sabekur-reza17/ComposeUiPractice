@@ -20,12 +20,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.sabekur2017.composeuipractice.internals.columColor
 import  com.sabekur2017.composeuipractice.internals.*
+import com.sabekur2017.composeuipractice.navigation.Navigation
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-             MainContent()
+           //  MainContent()
+            Navigation()
         }
     }
 }
@@ -50,7 +52,7 @@ fun MainContent(){
                     .background(backgroundColor)
                     .padding(normalElevation)
                     .background(
-                        if (counter%2 == 0)evenColor
+                        if (counter % 2 == 0) evenColor
                         else oddColor
                     )
                     .padding(size25dp)
@@ -62,5 +64,6 @@ fun MainContent(){
 @Preview
 @Composable
 fun ComposablePreview(){
-    MainContent()
+   // MainContent()
+    Navigation()
 }

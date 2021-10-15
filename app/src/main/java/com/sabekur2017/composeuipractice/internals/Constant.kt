@@ -14,6 +14,7 @@ val dividerNormalThickness = 1.0.dp
 val normalElevation = 1.dp
 val size8dp = 8.dp
 val size25dp = 25.dp
+val size50dp = 50.dp
 val textFontSize = 30.sp
 
 
