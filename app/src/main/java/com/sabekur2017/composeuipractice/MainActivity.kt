@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.sabekur2017.composeuipractice.internals.columColor
 import  com.sabekur2017.composeuipractice.internals.*
 import com.sabekur2017.composeuipractice.navigation.Navigation
+import com.sabekur2017.composeuipractice.uicomponent.AlertDialogExample
 import com.sabekur2017.composeuipractice.uicomponent.DropDownDemo
 import com.sabekur2017.composeuipractice.uicomponent.ModelDrawerSample
 
@@ -29,7 +30,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
            //  MainContent()
-            ModelDrawerSample()
+            AlertDialogExample()
         }
     }
 }
