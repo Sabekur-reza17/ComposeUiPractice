@@ -4,24 +4,24 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.sabekur2017.composeuipractice.internals.columColor
 import  com.sabekur2017.composeuipractice.internals.*
 import com.sabekur2017.composeuipractice.navigation.Navigation
 import com.sabekur2017.composeuipractice.uicomponent.AlertDialogExample
+import com.sabekur2017.composeuipractice.uicomponent.DrawSimpleCircle
 import com.sabekur2017.composeuipractice.uicomponent.DropDownDemo
 import com.sabekur2017.composeuipractice.uicomponent.ModelDrawerSample
 
@@ -29,21 +29,29 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           //  MainContent()
-            AlertDialogExample()
+            //  MainContent()
+            Column(
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                DrawSimpleCircle(color = Color.Gray)
+            }
+
         }
     }
 }
 
 @Composable
-fun MainContent(){
-    val scrollState= rememberScrollState()
-    LaunchedEffect(Unit){scrollState.animateScrollTo(10000)}
-    Column(modifier = Modifier
-        .background(columColor)
-        .fillMaxSize()
-        .verticalScroll(scrollState)) {
-        repeat(100){  counter->
+fun MainContent() {
+    val scrollState = rememberScrollState()
+    LaunchedEffect(Unit) { scrollState.animateScrollTo(10000) }
+    Column(
+        modifier = Modifier
+            .background(columColor)
+            .fillMaxSize()
+            .verticalScroll(scrollState)
+    ) {
+        repeat(100) { counter ->
             Text(
                 text = "Counter : $counter",
                 fontSize = textFontSize,
@@ -64,9 +72,10 @@ fun MainContent(){
 
     }
 }
+
 @Preview
 @Composable
-fun ComposablePreview(){
-   // MainContent()
+fun ComposablePreview() {
+    // MainContent()
     Navigation()
 }
