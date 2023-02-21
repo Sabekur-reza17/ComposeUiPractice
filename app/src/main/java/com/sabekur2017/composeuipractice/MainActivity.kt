@@ -3,6 +3,8 @@ package com.sabekur2017.composeuipractice
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -11,31 +13,20 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import com.sabekur2017.composeuipractice.internals.columColor
 import  com.sabekur2017.composeuipractice.internals.*
 import com.sabekur2017.composeuipractice.navigation.Navigation
-import com.sabekur2017.composeuipractice.uicomponent.AlertDialogExample
-import com.sabekur2017.composeuipractice.uicomponent.DrawSimpleCircle
-import com.sabekur2017.composeuipractice.uicomponent.DropDownDemo
-import com.sabekur2017.composeuipractice.uicomponent.ModelDrawerSample
+import com.sabekur2017.composeuipractice.uicomponent.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            //  MainContent()
-            Column(
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                DrawSimpleCircle(color = Color.Gray)
-            }
+            MyUiPracticeApp()
 
         }
     }
