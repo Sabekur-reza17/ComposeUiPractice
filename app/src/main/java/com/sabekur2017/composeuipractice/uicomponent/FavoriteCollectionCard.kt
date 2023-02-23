@@ -37,7 +37,7 @@ fun FavoriteCollectionCard(
             )
             Text(
                 text = stringResource(text),
-                style = MaterialTheme.typography.h3,
+                style = MaterialTheme.typography.h6,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }

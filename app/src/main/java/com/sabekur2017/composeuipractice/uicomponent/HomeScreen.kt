@@ -13,12 +13,16 @@ import com.sabekur2017.composeuipractice.R
 
 @Composable
 fun HomeScreen(modifier: Modifier = Modifier){
-    Column(modifier.verticalScroll(rememberScrollState()).padding(vertical = 16.dp)) {
+    Column(
+        modifier
+            .verticalScroll(rememberScrollState())
+            .padding(vertical = 16.dp)) {
         Spacer(modifier = Modifier.height(16.dp))
         MySearchBar(Modifier.padding(horizontal = 16.dp))
         HomeSection(title = R.string.align_your_body) {
             AlignYourBodyRow()
         }
+        Spacer(modifier = Modifier.height(16.dp))
         HomeSection(title = R.string.favorite_collections) {
             FavoriteCollectionsGrid()
         }

@@ -7,9 +7,9 @@ import androidx.compose.ui.Modifier
 import com.sabekur2017.composeuipractice.ui.theme.ComposeUiPracticeTheme
 
 @Composable
-fun MyUiPracticeApp(){
-    ComposeUiPracticeTheme{
-        Scaffold { padding ->
+fun MyUiPracticeApp() {
+    ComposeUiPracticeTheme {
+        Scaffold(bottomBar = { SootheBottomNavigation() }) { padding ->
             HomeScreen(Modifier.padding(padding))
         }
     }

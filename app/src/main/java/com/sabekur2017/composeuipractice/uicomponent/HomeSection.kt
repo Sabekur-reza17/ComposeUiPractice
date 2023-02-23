@@ -1,9 +1,7 @@
 package com.sabekur2017.composeuipractice.uicomponent
 
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.paddingFromBaseline
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -18,7 +16,10 @@ fun HomeSection(
     modifier: Modifier = Modifier, content: @Composable () -> Unit
 ) {
     Column(modifier) {
-        Text(text = stringResource(title).uppercase(Locale.getDefault()), style = MaterialTheme.typography.h5, modifier = Modifier.paddingFromBaseline(top = 40.dp, bottom = 8.dp).padding(horizontal = 16.dp))
+        Text(text = stringResource(title).uppercase(Locale.getDefault()), style = MaterialTheme.typography.h5, modifier = Modifier
+            .paddingFromBaseline(top = 40.dp, bottom = 8.dp)
+            .padding(horizontal = 16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         content()
     }
 }
