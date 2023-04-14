@@ -1,1 +1,1 @@
-# ComposeUiPractice Readme edit
+# ComposeUiPractice Readme
