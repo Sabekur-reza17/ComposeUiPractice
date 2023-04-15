@@ -15,19 +15,17 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import com.sabekur2017.composeuipractice.internals.columColor
-import  com.sabekur2017.composeuipractice.internals.*
-import com.sabekur2017.composeuipractice.navigation.Navigation
-import com.sabekur2017.composeuipractice.presentation.features.login.LoginScreen
-import com.sabekur2017.composeuipractice.uicomponent.*
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-           LoginScreen()
+           MainContent()
 
         }
     }
@@ -39,26 +37,21 @@ fun MainContent() {
     LaunchedEffect(Unit) { scrollState.animateScrollTo(10000) }
     Column(
         modifier = Modifier
-            .background(columColor)
+            .background(Color.White)
             .fillMaxSize()
             .verticalScroll(scrollState)
     ) {
         repeat(100) { counter ->
             Text(
                 text = "Counter : $counter",
-                fontSize = textFontSize,
-                color = textColor,
+                fontSize = 30.sp,
+                color = Color.Black,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(normalRadius))
-                    .background(backgroundColor)
-                    .padding(normalElevation)
-                    .background(
-                        if (counter % 2 == 0) evenColor
-                        else oddColor
-                    )
-                    .padding(size25dp)
+                    .clip(RoundedCornerShape(4.dp))
+                    .background(Color.White)
+                    .padding(16.dp)
             )
         }
 
@@ -68,6 +61,5 @@ fun MainContent() {
 @Preview
 @Composable
 fun ComposablePreview() {
-    // MainContent()
-    Navigation()
+     MainContent()
 }
