@@ -20,12 +20,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.sabekur2017.composeuipractice.presentation.features.dialog.DifferentButtonDemo
 import com.sabekur2017.composeuipractice.presentation.features.dialog.DifferentDialogDemo
+import com.sabekur2017.composeuipractice.presentation.features.list.CardDemo
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            DifferentDialogDemo()
+            CardDemo()
 
         }
     }
